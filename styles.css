@@ -23,7 +23,7 @@ body {
 header {
     background: linear-gradient(135deg, var(--dark-bg), #4a4a4a);
     color: white;
-    padding: 1rem;
+    padding: 0.5rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -33,19 +33,23 @@ header {
 
 header h1 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: glow 2s ease-in-out infinite alternate;
 }
 
+nav {
+    position: relative;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 nav ul li {
@@ -228,24 +232,55 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
+    header {
+        position: relative;
+        padding: 0.5rem;
+    }
+
+    main {
+        margin-top: 0;
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
+        gap: 0.5rem;
     }
 
     nav ul li {
-        margin: 0.5rem 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.5rem;
+        background: rgba(255,255,255,0.1);
+        border-radius: 5px;
+    }
+
+    .hero {
+        padding-top: 2rem;
     }
 
     .hero h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        padding: 0 1rem;
     }
 
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
     }
 } 
