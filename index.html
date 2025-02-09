@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kompiuterių Evoliucija</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kompiuterių Evoliucija</h1>
+        <nav>
+            <ul>
+                <li><a href="#pradzia">Pradžia</a></li>
+                <li><a href="#istorija">Istorija</a></li>
+                <li><a href="#etapai">Evoliucijos Etapai</a></li>
+                <li><a href="#ateitis">Ateitis</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="pradzia" class="hero">
+            <h2>Nuo skaičiuotuvo iki superkompiuterio</h2>
+            <p>Kelionė per kompiuterių istorijos vingius</p>
+        </section>
+
+        <section id="istorija" class="timeline">
+            <h2>Kompiuterių Istorija</h2>
+            <div class="timeline-item">
+                <h3>1940-ieji</h3>
+                <img src="images/eniac.jpg" alt="ENIAC kompiuteris">
+                <p>ENIAC - pirmasis elektroninis kompiuteris</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1970-ieji</h3>
+                <img src="images/altair.jpg" alt="Altair 8800">
+                <p>Altair 8800 - pirmasis asmeninis kompiuteris</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1980-ieji</h3>
+                <img src="images/ibm-pc.jpg" alt="IBM PC">
+                <p>IBM PC - standarto pradžia</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Šiandien</h3>
+                <img src="images/modern.jpg" alt="Modernus kompiuteris">
+                <p>Galingi, kompaktiški ir mobilūs įrenginiai</p>
+            </div>
+        </section>
+
+        <section id="etapai">
+            <h2>Evoliucijos Etapai</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Lempos</h3>
+                    <p>Pirmoji karta (1940-1956)</p>
+                </div>
+                <div class="card">
+                    <h3>Tranzistoriai</h3>
+                    <p>Antroji karta (1956-1963)</p>
+                </div>
+                <div class="card">
+                    <h3>Integrinės Schemos</h3>
+                    <p>Trečioji karta (1964-1971)</p>
+                </div>
+                <div class="card">
+                    <h3>Mikroprocesoriai</h3>
+                    <p>Ketvirtoji karta (1971-dabar)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ateitis">
+            <h2>Ateities Perspektyvos</h2>
+            <div class="future-grid">
+                <div class="future-item">
+                    <h3>Kvantiniai Kompiuteriai</h3>
+                    <p>Naujas skaičiavimų era</p>
+                </div>
+                <div class="future-item">
+                    <h3>Dirbtinis Intelektas</h3>
+                    <p>Išmanūs sprendimai</p>
+                </div>
+                <div class="future-item">
+                    <h3>Biologiniai Kompiuteriai</h3>
+                    <p>DNR skaičiavimai</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Emilio ir Dominyko VGG projektinis darbas. Visos teisės saugomos.</p>
+    </footer>
+
+    <script>
+        // Animacija timeline elementams
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('.timeline-item').forEach((item) => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html> 
