@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+/*  smooth scroll  */
+      scroll-behavior: smooth;
+}
 :root {
     --primary-color: #2196f3;
     --secondary-color: #00ff9d;
@@ -121,6 +124,7 @@ main {
     transition: var(--transition);
 }
 
+
 .timeline-item.visible {
     transform: translateY(0);
     opacity: 1;
@@ -153,6 +157,18 @@ main {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+
+
+/*  hover animation..  */
+}
+.card p{
+      opacity: 0;
+    max-height: 0;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+.card:hover p {
+    opacity: 1;
+    max-height: 100px;
 }
 
 .card::before {
@@ -272,6 +288,10 @@ footer p {
     .hero p {
         font-size: 1rem;
         padding: 0 1rem;
+    }
+        .card p {
+        opacity: 1;
+        max-height: none;
     }
 }
 
